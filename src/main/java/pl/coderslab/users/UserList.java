@@ -17,13 +17,10 @@ public class UserList extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         UserDAO userDao = new UserDAO();
         request.setAttribute("users", userDao.findAll());
-       // request.setAttribute("users1", "2");
         getServletContext().getRequestDispatcher("/users/list.jsp").forward(request, response);
 
-
-
-        response.sendRedirect("/users/list.jsp");
     }
 }

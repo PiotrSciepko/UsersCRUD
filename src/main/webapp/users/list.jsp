@@ -8,11 +8,11 @@
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">Lista użytkowników</h1>
-        <a href="/users/list" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+        <a href="/user/list" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                 class="fas fa-download fa-sm text-white-50"></i> Dodaj użytkownika</a>
     </div>
-    <table style="width:100%">
-        <tr>
+    <table class="table">
+        <tr >
             <th>Id</th>
             <th>Nazwa użytkownika</th>
             <th>Email</th>
@@ -20,25 +20,24 @@
         </tr>
 
         <c:forEach items="${users}" var="user">
-            <tr>
+            <tr >
                 <td>${user.getId()}</td>
                 <td>${user.getUsername()}</td>
                 <td>${user.getEmail()}</td>
                 <td>
-                    <form action="/users/list" style="display:inline; font-size: 10px;">
+                    <form action="/user/list" style="display:inline; font-size: 10px;">
                         <button type="submit">Pokaż</button>
                     </form>
-                    <form action="/users/list" style="display:inline; font-size: 10px;">
+                    <form action="/user/list" style="display:inline; font-size: 10px;">
                         <button type="submit">Edytuj</button>
                     </form>
-                    <form action="/users/list" style="display:inline; font-size: 10px;">
+                    <form action="/user/list" style="display:inline; font-size: 10px;">
                         <button type="submit">Usuń</button>
                     </form>
                 </td>
             </tr>
         </c:forEach>
     </table>
-    <%--    ${users}--%>
 
 </div>
 <!-- /.container-fluid -->
