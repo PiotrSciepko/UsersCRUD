@@ -4,7 +4,7 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
 
-@WebFilter("/*")
+@WebFilter("/user/*")
 public class CharacterSetFilter implements Filter {
     public void destroy() {
     }
