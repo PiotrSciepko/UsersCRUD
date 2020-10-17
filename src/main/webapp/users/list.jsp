@@ -8,11 +8,11 @@
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">Lista użytkowników</h1>
-        <a href="/user/list" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+        <a href="/users/add.jsp" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                 class="fas fa-download fa-sm text-white-50"></i> Dodaj użytkownika</a>
     </div>
     <table class="table">
-        <tr >
+        <tr style="background-color: white">
             <th>Id</th>
             <th>Nazwa użytkownika</th>
             <th>Email</th>
@@ -20,7 +20,7 @@
         </tr>
 
         <c:forEach items="${users}" var="user">
-            <tr >
+            <tr style="background-color: white">
                 <td>${user.getId()}</td>
                 <td>${user.getUsername()}</td>
                 <td>${user.getEmail()}</td>
