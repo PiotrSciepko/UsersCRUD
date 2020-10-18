@@ -28,11 +28,12 @@
                 <td>${userName}</td>
                 <td>${userEmail}</td>
                 <td>
-                    <form action="/user/list" method="post" style="display:inline; font-size: 10px;">
+                    <form action="/user/show?id=${userID}&username=${userName.replaceAll(" ", "_")}&email=${userEmail}"
+                          method="post" style="display:inline; font-size: 10px;">
                         <button type="submit">Pokaż</button>
                     </form>
-                    <form action="/users/edit.jsp?id=${userID}&username=${userName.replaceAll(" ", "_")}&email=${userEmail}" method="post"
-                          style="display:inline; font-size: 10px;">
+                    <form action="/users/edit.jsp?id=${userID}&username=${userName.replaceAll(" ", "_")}&email=${userEmail}"
+                          method="post" style="display:inline; font-size: 10px;">
                         <button type="submit">Edytuj</button>
                     </form>
                     <form action="/user/list" method="post" style="display:inline; font-size: 10px;">
