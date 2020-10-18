@@ -33,19 +33,19 @@
                         <input type="hidden" name="id" value="${userID}">
                         <input type="hidden" name="username" value="${userName}">
                         <input type="hidden" name="email" value="${userEmail}">
-                        <button type="submit">Pokaż</button>
+                        <button type="submit" style="background-color: lightgreen; border:none">Pokaż</button>
                     </form>
                     <form action="/users/edit.jsp"
                           method="post" style="display:inline; font-size: 10px;">
                         <input type="hidden" name="id" value="${userID}">
                         <input type="hidden" name="username" value="${userName}">
                         <input type="hidden" name="email" value="${userEmail}">
-                        <button type="submit">Edytuj</button>
+                        <button type="submit" style="background-color: gold; border:none">Edytuj</button>
                     </form>
                     <form action="/user/delete"
                           method="post" style="display:inline; font-size: 10px;">
                         <input type="hidden" name="id" value="${userID}">
-                        <button type="submit">Usuń</button>
+                        <button type="submit" style="background-color: lightcoral; border:none">Usuń</button>
                     </form>
                 </td>
             </tr>
