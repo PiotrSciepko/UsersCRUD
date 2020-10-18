@@ -14,10 +14,11 @@
     <table class="table">
         <tr style="background-color: white">
             <td>
-                <form action="/user/edit?id=${param.id}" method="post">
+                <form action="/user/edit" method="post">
+                    <input type="hidden" name="id" value="${param.id}">
                     <label style="width:100%; padding-bottom: 15px;" >
                         Nazwa <br />
-                        <input style="width:100%;" type="text" name="username" value="${param.username.replaceAll("_", " ")}">
+                        <input style="width:100%;" type="text" name="username" value="${param.username}">
                     </label><br />
                     <label style="width:100%;padding-bottom: 15px;">
                         Email <br />
