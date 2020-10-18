@@ -36,7 +36,8 @@
                           method="post" style="display:inline; font-size: 10px;">
                         <button type="submit">Edytuj</button>
                     </form>
-                    <form action="/user/list" method="post" style="display:inline; font-size: 10px;">
+                    <form action="/user/delete?id=${userID}"
+                          method="post" style="display:inline; font-size: 10px;">
                         <button type="submit">Usuń</button>
                     </form>
                 </td>
