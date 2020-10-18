@@ -8,7 +8,7 @@
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">Lista użytkowników</h1>
-        <a href="/users/add.jsp" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+        <a href="/user/add" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                 class="fas fa-download fa-sm text-white-50"></i> Dodaj użytkownika</a>
     </div>
     <table class="table">
@@ -20,18 +20,22 @@
         </tr>
 
         <c:forEach items="${users}" var="user">
+            <c:set var="userID" value="${user.getId()}"/>
+            <c:set var="userName" value="${user.getUsername()}"/>
+            <c:set var="userEmail" value="${user.getEmail()}"/>
             <tr style="background-color: white">
-                <td>${user.getId()}</td>
-                <td>${user.getUsername()}</td>
-                <td>${user.getEmail()}</td>
+                <td>${userID}</td>
+                <td>${userName}</td>
+                <td>${userEmail}</td>
                 <td>
-                    <form action="/user/list" style="display:inline; font-size: 10px;">
+                    <form action="/user/list" method="post" style="display:inline; font-size: 10px;">
                         <button type="submit">Pokaż</button>
                     </form>
-                    <form action="/user/list" style="display:inline; font-size: 10px;">
+                    <form action="/users/edit.jsp?id=${userID}&username=${userName.replaceAll(" ", "_")}&email=${userEmail}" method="post"
+                          style="display:inline; font-size: 10px;">
                         <button type="submit">Edytuj</button>
                     </form>
-                    <form action="/user/list" style="display:inline; font-size: 10px;">
+                    <form action="/user/list" method="post" style="display:inline; font-size: 10px;">
                         <button type="submit">Usuń</button>
                     </form>
                 </td>
